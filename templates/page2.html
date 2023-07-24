@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Page</title>
+  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <style>
+    *{
+margin: 0; padding: 10px;
+box-sizing: border-box;
+font-family: 'Josefin Sans', sans-serif;
+font-size: 18px;
+}
+header{
+ width: 100%;
+ height: 100vh;
+ background-image: url('../images/bg.png');
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+
+}
+
+.mainheader{
+ width: 100%;
+ height: 100px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.mainheader .logo img{
+ width: 250px; height: 70px;
+ padding-left: 60px;
+}
+
+.mainheader nav{
+ width: 450px;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.mainheader nav a{
+ text-decoration: none;
+ color: black;
+ text-transform: uppercase;
+}
+
+.menubtn{
+ margin-right: 60px;
+}
+.mainheader button{
+ padding: 10px 45px;
+ text-align: center;
+ font-size: 14px;
+ color: #fff;
+ border: none;
+ background-image: linear-gradient(to right,#649bff,#0070fa,#649bff);
+ border-radius: 10px;
+}
+  </style>
+</head>
+<body>
+    <header >
+        <div class="mainheader">
+         <div class="logo">
+          <img src="{{ url_for('static', filename='images/2.jpg') }}" style="width: 50%; height: 50%;">
+         </div>
+       
+         <nav>
+          <a href="/dashboard">Home</a>
+          <a href="/page2">Challenges</a>
+          <a href="/rv">Review</a>
+          <a href="/profile" >My&nbsp;Profile</a>
+         </nav>
+       
+         <div class="menubtn">
+          <button><a style="color:#eee; text-decoration: none;" href="/logout"> Logout</a></button>
+         </div>
+        </div>
+        </header>
+  <main><!--<center> -->
+    <div class="consult-cards">
+    <div class="card" style="width: 20rem; height:425px;">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/i11.jpg') }}" alt="Card image cap" style="width:300px; border-right: 10px; margin-left: -10px;">
+        <div class="card-body">
+          <!-- <h3 class="card-title" style="text-align: center;"><i>Yoga</i></h3> -->
+          <!-- <p class="card-text">Skip the travel and take online consultation</p> -->
+          <a href="/yoga" class="i" ><center>Yoga</center></a>
+        </div>
+      </div>
+      <div class="card" style="width: 20rem; height:425px;">
+        <img class="card-img-top" src="https://tse2.mm.bing.net/th?id=OIP.bLqBwv9xDykuHa91wRwcjwHaE8&pid=Api&P=0" alt="Card image cap" style="width:300px; border-right: 10px; height: 300px; margin-left: -10px;">
+        <div class="card-body">
+          <!-- <h2 class="card-title" style="text-align: center;"><i>Exercise</i></h2> -->
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          <a href="/ex" class="i"><center>Exercise</center></a>
+        </div>
+      </div>
+      <div class="card" style="width: 20rem; height:425px;">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/i12.avif') }}" alt="Card image cap"  style="width:300px; border-right: 10px; height: 300px; margin-left: -10px;">
+        <div class="card-body">
+          <!-- <h2 class="card-title" style="text-align: center;"><i>Food Diet Tips</i></h2> -->
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          <a href="/fd" class="i"><center>Food Diet Tips</center></a>
+        </div>
+      </div>
+       </div><!--</center> -->
+  </main>
+  <style>
+    /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .i {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.i {
+  background-color:#0070fa;
+}
+
+  header {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 40px;
+    margin: 10px;
+    width: 300px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .card p {
+    margin-bottom: 0;
+    color: #777;
+  }
+  
+  .card:hover {
+    background-color: #e9e9e9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
+  }
+  .consult-cards{
+     display:flex;
+     margin-left:250px;
+     margin-top:10px;
+  }
+  .card-img-top{
+    margin-right: 20px;
+  }
+
+  *{
+margin: 0; padding: 10px;
+box-sizing: border-box;
+font-family: 'Josefin Sans', sans-serif;
+font-size: 18px;
+}
+
+header{
+ width: 100%;
+ height: 100px;
+ background-image: url('../images/bg.png');
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+ backface-visibility: hidden;
+ background-color: white;
+
+}
+
+.mainheader{
+ width: 100%;
+ height: 60px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.mainheader .logo img{
+ width: 250px; height: 70px;
+ padding-left: 60px;
+}
+
+.mainheader nav{
+ width: 450px;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.mainheader nav a{
+ text-decoration: none;
+ color: black;
+ text-transform: uppercase;
+}
+
+.menubtn{
+ margin-right: 60px;
+}
+.mainheader button{
+ padding: 10px 45px;
+ text-align: center;
+ font-size: 14px;
+ color: #fff;
+ border: none;
+ background-image: linear-gradient(to right,#649bff,#0070fa,#649bff);
+ border-radius: 10px;
+}
+
+
+main{
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+  </style>
+</body>
+</html>

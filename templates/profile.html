@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+    <style>
+        /* CSS styles for the navbar and content area */
+        .navbar {
+            width: 200px;
+            float: left;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+        .navbar a {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        /* CSS styles for the form and table */
+        form {
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* CSS styles for the edit form */
+        .edit-form {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .edit-form input[type="text"] {
+            width: 300px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .edit-form input[type="submit"] {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* CSS styles for the appointments section */
+        .count {
+            font-weight: bold;
+            color: #4CAF50;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/details">Details</a>
+        <a href="/appointments">Appointments</a>
+    </div>
+    <div class="content">
+        {% if page == 'details' %}
+            <h2>Details</h2>
+            <form method="POST" action="/details">
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Details</th>
+                        <th>Actions</th>
+                    </tr>
+                    {% for row in details %}
+                        <tr>
+                            <td>{{ row[0] }}</td>
+                            <td>{{ row[1] }}</td>
+                            <td>
+                                <a href="#" class="edit-link" data-id="{{ row[0] }}">Edit</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+                <div class="edit-form">
+                    <input type="text" name="id" id="edit-id" readonly>
+                    <input type="text" name="details" id="edit-details">
+                    <input type="submit" value="Update">
+                </div>
+            </form>
+        {% elif page == 'appointments' %}
+            <h2>Appointments</h2>
+            <p class="count">Number of Appointments: {{ count }}</p>
+        {% else %}
+            <h2>Invalid page</h2>
+        {% endif %}
+    </div>
+
+    <script>
+        // Script to handle edit link click and display the edit form
+        const editLinks = document.querySelectorAll('.edit-link');
+        const editForm = document.querySelector('.edit-form');
+        const editIdInput = document.getElementById('edit-id');
+        const editDetailsInput = document.getElementById('edit-details');
+
+        editLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const id = link.dataset.id;
+                const details = link.parentElement.previousElementSibling.textContent;
+                editIdInput.value = id;
+                editDetailsInput.value = details;
+                editForm.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>

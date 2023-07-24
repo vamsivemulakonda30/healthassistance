@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Page</title>
+  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  <style>
+
+    
+  *{
+margin: 0; padding: 10px;
+box-sizing: border-box;
+font-family: 'Josefin Sans', sans-serif;
+font-size: 18px;
+}
+
+header{
+ width: 100%;
+ height: 100px;
+ background-image: url('../images/bg.png');
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+ backface-visibility: hidden;
+ background-color: white;
+}
+
+.mainheader{
+ width: 100%;
+ height: 60px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.mainheader .logo img{
+ width: 250px; height: 70px;
+ padding-left: 60px;
+ margin-bottom: 8px;
+}
+
+.mainheader nav{
+ width: 450px;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ margin-left: 200px;
+ margin-bottom: -20px;
+}
+
+.mainheader nav a{
+ text-decoration: none;
+ color: black;
+ text-transform: uppercase;
+}
+
+.menubtn{
+ margin-right: 60px;
+}
+.mainheader button{
+ padding: 10px 45px;
+ text-align: center;
+ font-size: 14px;
+ color: #fff;
+ border: none;
+ background-image: linear-gradient(to right,#649bff,#0070fa,#649bff);
+ border-radius: 10px;
+}
+
+
+main{
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #111;
+}
+
+h1 {
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	font-weight: 200;
+	text-align: center;
+	padding: 40px 0 20px 0;
+}
+
+.breath {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: #222;
+	border: 2px solid #fff;
+	border-radius: 500px;
+	animation-name: circle-expand;
+	animation-duration: 10000ms;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+
+.inhale, .exhale, .hold {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+	/* Inhale and Exhale text */
+	font-size: 5vh;
+	font-family: 'Raleway',sans-serif;
+	font-weight: 200;
+	text-transform: uppercase;
+	color: #fff;
+	opacity: 0;
+	
+	animation-name: change-name;
+	animation-duration: 10000ms;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+
+.inhale {
+	animation-name: control-inhale;
+	animation-duration: 10000ms;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+
+.hold {
+	animation-name: control-hold;
+	animation-duration: 10000ms;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+
+.exhale {
+	animation-name: control-exhale;
+	animation-duration: 10000ms;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+
+/* Animation */
+@keyframes circle-expand {
+	0% {
+		width: 30vh;
+		height: 30vh;
+	}
+	
+	40% {
+		width: 50vh;
+		height: 50vh;
+	}
+	
+	60% {
+		width: 50vh;
+		height: 50vh;
+	}
+	
+	100% {
+		width: 30vh;
+		height: 30vh;
+	}
+}
+
+@keyframes control-inhale {
+	0% {
+		opacity: 1;
+	}
+	
+	39% {
+		opacity: 1;
+	}
+	
+	41% {
+		opacity: 0;
+	}
+	
+	99% {
+		opacity: 0
+	}
+	
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes control-hold {
+	0% {
+		opacity: 0;
+	}
+	
+	39% {
+		opacity: 0;
+	}
+	
+	41% {
+		opacity: 1;
+	}
+	
+	59% {
+		opacity: 1;
+	}
+	
+	61% {
+		opacity: 0;
+	}
+}
+
+@keyframes control-exhale {
+	0% {
+		opacity: 0;
+	}
+	
+	59% {
+		opacity: 0;
+	}
+	
+	61% {
+		opacity: 1;
+	}
+	
+	98% {
+		opacity: 1;
+	}
+	
+	100% {
+		opacity: 0;
+	}
+}
+
+.cr {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-transform: lowercase;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: 100;
+}
+
+.cr a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 400;
+}
+  </style>
+</head>
+<body class="ss">
+    <header >
+        <div class="mainheader">
+         <div class="logo">
+          <img src="{{ url_for('static', filename='images/2.jpg') }}" style="width: 125%; height: 130px;">
+         </div>
+       
+         <nav>
+          <a href="/dashboard">Home</a>
+          <a href="/page2">Challenges</a>
+          <a href="/rv">Review</a>
+          <a href="/profile" >My&nbsp;Profile</a>
+         </nav>
+       
+         <div class="menubtn">
+          <button><a style="color:#eee; text-decoration: none;" href="/logout"> Logout</a></button>
+         </div>
+        </div>
+        </header>
+        <h1>
+          Take a Time to Meditate
+          </h1>
+          <div class="breath">
+              <span class="inhale">
+                  Inhale
+              </span>
+              <span class="exhale">
+                  Exhale
+              </span>
+              <span class="hold">
+                  Hold
+              </span>
+          </div>
+</body>
+</html>

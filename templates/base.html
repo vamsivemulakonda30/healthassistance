@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+ <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+ <style>
+  *{
+margin: 0; padding: 10px;
+box-sizing: border-box;
+font-family: 'Josefin Sans', sans-serif;
+font-size: 18px;
+}
+
+header{
+ width: 100%;
+ height: 100vh;
+ background-image: url('../images/bg.png');
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+
+}
+
+.mainheader{
+ width: 100%;
+ height: 100px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.mainheader .logo img{
+ width: 250px; height: 70px;
+ padding-left: 60px;
+}
+
+.mainheader nav{
+ width: 450px;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.mainheader nav a{
+ text-decoration: none;
+ color: black;
+ text-transform: uppercase;
+}
+
+.menubtn{
+ margin-right: 60px;
+}
+.mainheader button{
+ padding: 10px 45px;
+ text-align: center;
+ font-size: 14px;
+ color: #fff;
+ border: none;
+ background-image: linear-gradient(to right,#649bff,#0070fa,#649bff);
+ border-radius: 10px;
+}
+
+
+main{
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+main .right-sec{
+ padding-right: 70px;
+}
+
+main .left-sec{
+ padding-left: 100px;
+}
+
+.left-sec h2{
+ font-size: 20px;
+ text-transform: capitalize;
+ font-weight: lighter;
+ color: #242424;
+ margin-top: 100px;
+}
+
+.left-sec h1{
+ font-size: 55px;
+ text-transform: capitalize;
+ font-weight: 700;
+ margin: 15px 0;
+}
+
+.left-sec p{
+ margin-bottom: 20px;
+}
+
+.left-sec button{
+ padding: 15px 45px;
+ text-align: center;
+ font-size: 14px;
+ color: #fff;
+ border: none;
+ background-image: linear-gradient(to right,#649bff,#0070fa,#649bff);
+ border-radius: 10px;
+}
+
+
+.section2{
+width:100%;
+margin:5vh auto;
+}
+
+.section2 .cards{
+margin:auto;
+width:90%;
+display:flex;
+}
+
+.section2 .cards .card{
+width:24%;
+margin:20px;
+text-align:Center;
+}
+
+.section2 .cards .card .fa-certificate{
+  font-size:3em;
+  color:#01bcd4;
+}
+
+.section2 .cards .card p{
+color:rgba(1,1,1,0.7);
+}
+
+
+about .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .row .image{
+  flex: 1 1 40rem;
+}
+
+.about .row .image img{
+  width: 35%;
+  height: 50%;
+  border-radius: 5rem;
+}
+
+.about .row .content{
+  flex: 1 1 40rem;
+  margin-top: -330px;
+}
+
+.about .row .content h3{
+  color: var(--black);
+  font-size: 3.5rem;
+  line-height: 1.5;
+  margin-left: 30px;
+  margin-bottom: 0px;
+}
+
+.about .row .content p{
+  font-size: 1.4rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+  line-height: 2;
+
+}
+/* end about */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,400&display=swap');
+
+:root{
+  --primary: #1f2e88 ;
+  --secondary: #2f66d4 ;
+  --hover: #a2d9f5;
+  --black: #333;
+  --white: #fff;
+  --light-color: #666;
+  --light-bg: #eee;
+  --border:.2rem solid rgba(0,0,0,0.1);
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,0.1);
+}
+
+*{
+  /* font-family: 'Poppins', sans-serif; */
+  margin:0;
+  padding: 0;
+  box-sizing:border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  transition: 0.2s linear;
+}
+
+html{
+  font-size: 62.2%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: var(--primary);
+  border-radius: 5rem;
+}
+
+/* global classes */
+
+section{
+  padding: 5rem 7%;
+}
+
+.heading{
+  font-size: 4rem;
+  text-align: center;
+  color: var(--black);
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 3rem;
+}
+
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  border-radius: .5rem;
+  background: var(--primary);
+  font-size: 1.7rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: var(--secondary);
+}
+/* services */
+.services{
+  background: var(--light-bg);
+}
+
+.services .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+  gap: 2rem;
+}
+
+.services .box-container .box{
+  padding: 4rem;
+  text-align: center;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  border-radius: 5rem;
+}
+
+.services .box-container .box:hover{
+  background: var(--hover);
+  cursor: context-menu;
+}
+
+.services .box-container .box img{
+  margin: 1rem 0;
+  height: 17rem;
+  border-radius: 5rem;
+}
+
+.services .box-container .box h3{
+  font-size: 2rem;
+  color: var(--black);
+  padding: 1rem 0;
+}
+
+.services .box-container .box p{
+  font-size: 1.5rem;
+  line-height: 2;
+  color: var(--light-color);
+}
+
+.footer{
+  text-align: center;
+}
+
+.footer .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+  gap: 2rem;
+}
+
+.footer .box-container .box h3{
+  font-size: 2.2rem;
+  padding: 1rem 0;
+  color: var(--secondary);
+}
+
+.footer .box-container .box p{
+  font-size: 1.5rem;
+  line-height: 2;
+  color: var(--light-color);
+  padding: .5rem 0;
+}
+
+.footer .box-container .box .share{
+  margin-top: 1rem;
+}
+
+.footer .box-container .box .share a{
+  height: 4.5rem;
+  width: 4.5rem;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 10%;
+  line-height: 4.5rem;
+  font-size: 1.7rem;
+  margin-right: .3rem;
+  text-align: center;
+}
+
+.footer .box-container .box .share a:hover{
+  background: var(--secondary);
+}
+
+.footer .box-container .box .link{
+  display: block;
+  font-size: 1.7rem;
+  line-height: 2;
+  color: var(--primary);
+  padding: .5rem 0;
+}
+
+.footer .box-container .box .link:hover{
+  color: var(--hover);
+}
+
+.footer .credit{
+  margin-top: 3rem;
+  padding-top: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--primary);
+  border-top: .1rem solid var(--secondary);
+}
+
+.footer .credit i{
+  color: var(--hover);
+}
+
+.footer .credit span{
+  color: var(--secondary);
+}
+
+/* end footer */
+
+
+ </style>
+</head>
+<body>
+<header>
+ <div class="mainheader">
+  <div class="logo">
+   <img src="{{ url_for('static', filename='images/2.jpg') }}" style="width: 50%; height: 50%;">
+  </div>
+
+  <nav>
+   <a href="/dashboard">Home</a>
+   <a href="/page2">Challenges</a>
+   <a href="/rv">Review</a>
+   <a href="/profile" >My Profile</a>
+  </nav>
+
+  <div class="menubtn">
+   <button><a style="color:#eee; text-decoration: none;" href="/logout"> Logout</a></button>
+  </div>
+ </div>
+ <main>
+  <section class="left-sec">
+   <h2> We Are Here For Your Care</h2>
+   <h1>  We The Best Doctors</h1>
+   <p>We are here for your care 24/7. Any help just call us.</p>
+   <button>
+     Make an appointment
+   </button>
+  </section>
+  <section class="right-sec">
+   <figure>
+    <img src="{{ url_for('static', filename='images/1.png') }}" >
+   </figure>
+  </section>
+ </main>
+</header>
+<!-- <h1 align="center" style="font-size: 50px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" > About Us</h1> -->
+
+<!-- about -->
+
+<section id="about" class="about">
+
+  <h1 class="heading"> ABOUT US </h1>
+<br>
+  <!--   content -->
+  <div class="row">
+
+    <!--     image -->
+    <div class="image" align="left">
+      <img src="https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="medical equipment">
+    </div>
+
+    <!--     info -->
+    <div class="content" align="right">
+      <h3>our treatment is made for you to be smiling all the time</h3>
+      <p>We are a dedicated medical services provider, committed to delivering high-quality healthcare to our patients.</p>
+      <p>Our focus is on preventive medical help and immediate doctor consultancy to ensure the well-being of our patients.</p>
+      <p>Preventive medical help</p>
+      <p>Immediate doctor consultancy</p>
+      <a href="#" class="btn">read more</a>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- </section> -->
+<!--SECTION2-->
+<br>
+<br>
+<br>
+<h1 class="heading"> our services </h1>
+<section class="section2">
+  <div class="cards">
+  <div class="card">
+  <div>
+    <img src="{{ url_for('static', filename='images/i3.png') }}" style="width: 35%; height:100px;">
+  <i class="fa-medkit"></i>
+  <h1>Qualified Doctors</h1>
+  <!-- <p>Lorem ipsum amet, consectetur adipiscing elit, sed do eiusmod tempor cididunt facilisis.</p> -->
+  </div>
+  </div>
+  <div class="card">
+    <div class="z">
+      <img src="{{ url_for('static', filename='images/4.webp') }}" style="width: 60%; height:100px;">
+  <i class="fa-certificate"></i>
+  <h1>Certified Services</h1>
+  <!-- <p>Lorem ipsum amet, consectetur adipiscing elit, sed do eiusmod tempor cididunt facilisis.</p> -->
+  </div>
+  </div>
+  <div class="card">
+  <div>
+    <img src="{{ url_for('static', filename='images/6.png') }}" style="width: 50%; height:110px;">
+  <i class="fa-stethoscope"></i>
+  <h1>Advanced Equipment</h1>
+  <!-- <p>Lorem ipsum amet, consectetur adipiscing elit, sed do eiusmod tempor cididunt facilisis.</p> -->
+  </div>
+  </div>
+  <div class="card">
+  <div>
+    <img src="{{ url_for('static', filename='images/5.webp') }}" style="width: 60%; height:95px;">
+  <i class="fa fa-heartbeat"></i>
+  <h1>Emergency Service</h1>
+  <!-- <p>Lorem ipsum amet, consectetur adipiscing elit, sed do eiusmod tempor cididunt facilisis.</p> -->
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <section id="services" class="services">
+
+    <h1 class="heading"> Top Doctors </h1>
+  
+    <div class="box-container">
+      <!--     start field -->
+      <div class="box">
+        <img class="card-img-top" src="https://images.clinicspots.com/tr:n-facility_profile_desktop/K9DM5cAvBvKthUJ0Rasyrm2aslLbNOp72C70eOjD.jpeg" alt="Card image cap" style="width:200px; border-right: 10px; height:200px;">
+        <h3>Dr. Ravichandran G</h3>
+         <h4 style="color:green; text-align: center;" ><i>40 years of experience</i></h4>
+        <p class="card-text" style="text-align: center;">Dermatologist</p>
+      
+      </div>
+      <!--     end field -->
+  
+      <!--     start field -->
+      <div class="box">
+       <img class="card-img-top" src="https://images.clinicspots.com/tr:n-facility_profile_desktop/0VnUlwuXG9FaYTmdirQIOxNpMMOxPocNUmjhFVyo.jpeg" alt="Card image cap" style="width:200px; border-right: 10px; height: 200px;">
+         <h3>Dr. K.k. Talwar</h3>
+          <h4 style="color:green; text-align: center;" ><i>54 years of experience</i></h4>
+                <p class="card-text" style="text-align: center; ">Cardiologist Cardiac Surgeon</p>
+      </div>
+      <!--     end field -->
+  
+      <!--     start field -->
+      <div class="box">
+        <img class="card-img-top" src="https://tse1.mm.bing.net/th?id=OIP.TWJMsY-7TEMuvZXASPm2swAAAA&pid=Api&P=0" alt="Card image cap"  style="width:200px; border-right: 10px; height: 200px;">
+       <h3>Dr. Ananya Das</h3>
+        <h4 style="color:green; text-align: center;" ><i>30 years of experience</i></h4>
+              <p class="card-text" style="text-align: center; ">Neurology</p>
+    </div>
+      <!--     end field -->
+  
+    </div>
+  
+  </section>
+
+  <section class="footer">
+  
+    <div class="box-container">
+      
+  <!--     start column -->
+      <div class="box">
+        
+        <h3>address</h3>
+        <p><b>www.visitme.com</b></p>
+        <div class="share">
+          <img src="{{ url_for('static', filename='images/10.jpg') }}" style="width: 50%; height:75px;">
+          <a href="#" class="fab fa-facebook-f"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fab fa-linkedin"></a>
+          <a href="#" class="fab fa-instagram"></a>
+        </div>
+     
+        
+      </div>
+  <!--     end column -->
+      
+  <!--     start column -->
+      <div class="box">
+        <h3>email</h3>
+        <a href="#" class="link"><b>support@gmail.com</b></a>
+      </div>
+      
+  <!--     end column -->
+      
+  <!--     start column -->
+      <div class="box">
+        <h3>opening hours</h3>
+        <p><b>Always At Your Service<br>
+          24/7 help with u</b>
+        </p>
+      </div>
+  <!--     end column -->   
+      
+    </div>
+    
+    <div class="credit">
+        made with <i class="fas fa-heart"></i> by <span>Raju</span> | all rights reserved &copy;2023
+      </div>
+    
+  </section>
+
+  
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    <p class="chatbox__description--header">Hi. My name is Raju Bhai. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+    </div>
+</div>
+
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

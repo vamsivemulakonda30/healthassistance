@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Page</title>
+  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  <style>
+
+
+header{
+font-family: Arial, sans-serif;
+ width: 100%;
+ height: 100px;
+ background-image: url('../images/bg.png');
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+ backface-visibility: hidden;
+ background-color: white;
+ font-size: 18px;
+
+}
+
+.mainheader{
+ width: 100%;
+ height: 100px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.mainheader .logo img{
+ width: 250px; height: 70px;
+ padding-left: 60px;
+}
+
+.mainheader nav{
+ width: 450px;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.mainheader nav a{
+ text-decoration: none;
+ color: black;
+ text-transform: uppercase;
+}
+
+.menubtn{
+ margin-right: 60px;
+}
+.mainheader button{
+ padding: 10px 45px;
+ text-align: center;
+ font-size: 14px;
+ color: #fff;
+ border: none;
+ background-image: linear-gradient(to right,#649bff,#0070fa,#649bff);
+ border-radius: 10px;
+}
+
+
+main{
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rajdhani:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Pangolin&display=swap');
+html,body{
+    padding: 0;
+    margin: 0;
+}
+#title{
+    font-family: 'Orbitron', sans-serif;
+font-family: 'Rajdhani', sans-serif;
+text-align: center;
+margin-top: 10px;
+font-size: 60px;
+}
+.container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-left: 175px;
+  }
+  .bg-dark {
+    color: #ffffff;
+    background-color:#5ca3fa;
+  }
+  .Biography{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Biography div {
+    flex: 1;
+  }
+  .Biography .img-div {
+    text-align: right;
+    overflow: hidden;
+    border-radius: 2rem;
+  }
+  .tribute-badge{
+    font-family: 'Courier New', Courier, monospace;
+    font-size:35px;
+  }
+  #bio{
+    font-size: 25px;
+    font-style: italic;
+    font-family:Arial, Helvetica, sans-serif;
+   
+  }
+  .Early{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .Early div{
+    flex:1
+  }
+  .Early .img-div {
+    text-align: left;
+    overflow: hidden;
+    border-radius: 3rem;
+  }
+  #qoute{
+    font-family: 'Orbitron', sans-serif;
+font-family: 'Pangolin', cursive;
+font-size: 60px;
+  }
+#qimg{
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+ol.custom-numbers {
+    list-style: none;
+}
+
+ol.custom-numbers li {
+    counter-increment: my-awesome-counter;
+}
+
+ol.custom-numbers li::before {
+    content: counter(my-awesome-counter) ". ";
+    color: #000000;
+    font-weight: bold;
+}
+li {
+    font-style: italic;
+    text-align: left;
+    margin-left: 150px;
+    font-size: 20px;
+}
+#award{
+        font-family: 'Orbitron', sans-serif;
+    font-family: 'Pangolin', cursive;
+    font-size: 60px;
+    text-align: center;
+}  
+.card {
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    display: block;
+    text-align: center;
+    background-color:#212529!important;
+  }
+
+  .card img {
+    width: 300px;
+    height: 200px;
+    
+  }
+  .card:hover, .card img:hover{
+    transform: scale(1.06);
+  }
+  footer{
+    text-align: center;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  </style>
+</head>
+<body>
+    <header >
+        <div class="mainheader">
+         <div class="logo">
+          <img src="{{ url_for('static', filename='images/2.jpg') }}" style="width: 50%; height: 50%;">
+         </div>
+       
+         <nav>
+          <a href="/dashboard">Home</a>
+          <a href="/page2">Challenges</a>
+          <a href="/rv">Review</a>
+          <a href="/profile" >My&nbsp;Profile</a>
+         </nav>
+       
+         <div class="menubtn">
+            <button><a style="color:#eee; text-decoration: none;" href="/logout"> Logout</a></button>
+         </div>
+        </div>
+        </header>
+        <h1 style="text-align: center;">Surya Namaskar</h1>
+ <section class="bg-dark " id="second">
+            <div class="container">
+                <div class="Biography">
+                    <div>
+                        <span class="tribute-badge">1.Prayer Pose - Pranamasana</span>
+                        <h2 id="bio">Stand with your feet together and evenly distribute your weight on both feet. Relax your shoulders and expand your chest. Lift both arms from the sides as you inhale, then bring your hands together in front of your chest in a prayer stance as you exhale.</h2>
+                    </div>
+                    <div class="img-div">
+                        <img src="https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/619d2c7157e9462bf3be5c39_woman-doing-yoga-asana-tadasana-namaste-2021-08-26-22-58-46-utc-min.jpg" alt="" width="500px" height="500px">
+                    </div>
+                </div>
+        </section>
+        <section class="bg-light " id="third">
+            <div class="container">
+                <div class="Early">
+                    <div>
+                        <span class="tribute-badge">2.Raised Arms Pose-Hasta Uttanasana</span>
+                        <h2 id="bio">
+                          Lift the arms up and back while breathing in, keeping the biceps near to the ears. The goal of this pose is to extend the entire body from the toes to the tips of the fingers. Pull the pelvis forward and reach up with your fingertips rather than going back to gain the most benefits.</h2>
+                    </div>
+                    <div class="img-div">
+                        <img src="https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/619d2c379da2168de8174aa7_sporty-fit-woman-practices-yoga-asana-anuvittasana-2021-08-26-22-58-51-utc.jpg" alt="" width="500px" height="550px">
+                    </div>
+                </div>
+        </section>
+        <section class="bg-dark " id="second">
+          <div class="container">
+              <div class="Biography">
+                  <div>
+                      <span class="tribute-badge">3. Hand To Foot Pose - Hasta Padasana</span>
+                      <h2 id="bio">Bend forward from the waist, keeping the spine erect, while exhaling. Bring your hands down to the floor beside your feet as you exhale.</h2>
+                  </div>
+                  <div class="img-div">
+                      <img src="https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/619d29b0f99f25b14973365b_woman-doing-ashtanga-vinyasa-yoga-asana-padangusht-2021-08-26-22-58-07-utc-min.jpg" alt="" width="500px" height="500px">
+                  </div>
+              </div>
+      </section>
+      <section class="bg-light " id="third">
+          <div class="container">
+              <div class="Early">
+                  <div>
+                      <span class="tribute-badge">4. Equestrian Pose - Ashwa Sanchalanasana</span>
+                      <h2 id="bio">
+                        Push your right leg back as far as you can while breathing in. Bring your right knee to the floor and raise your head.</h2>
+                  </div>
+                  <div class="img-div">
+                      <img src="https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/619d29a26625d9bf5c3d718e_horse-rider-yoga-pose-2021-08-26-15-32-18-utc-min.jpg" alt="" width="500px" height="550px">
+                  </div>
+              </div>
+      </section>
+      <section class="bg-dark " id="second">
+        <div class="container">
+            <div class="Biography">
+                <div>
+                    <span class="tribute-badge">5. Stick Pose - Dandasana</span>
+                    <h2 id="bio">Take your left leg back and bring your entire body into a straight line, keeping your arms perpendicular to the floor as you breathe in.</h2>
+                </div>
+                <div class="img-div">
+                    <img src="https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/619d2a664efa2fb74d7175df_woman-doing-yoga-asana-utthita-chaturanga-dandasan-2021-08-26-22-58-06-utc.jpg" alt="" width="500px" height="500px">
+                </div>
+            </div>
+    </section>
+    <section class="bg-light " id="third">
+        <div class="container">
+            <div class="Early">
+                <div>
+                    <span class="tribute-badge">6. Saluting With Eight Parts - Ashtanga Namaskara</span>
+                    <h2 id="bio">
+                      Exhale as you gently lower your knees to the floor. Slightly lower your hips, slip forward and lay your chest and chin on the floor. Raise your backside a smidgeon. The floor should be touched by two hands, two feet, two knees, chest, and chin (eight body parts).</h2>
+                </div>
+                <div class="img-div">
+                    <img src="https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/619d2aaf245aeab0df3873a7_woman-doing-yoga-asana-ashtangasana-isolated-on-wh-2021-08-26-22-58-47-utc.jpg" alt="" width="500px" height="550px">
+                </div>
+            </div>
+    </section>
+    <section class="bg-dark " id="second">
+      <div class="container">
+          <div class="Biography">
+              <div>
+                  <span class="tribute-badge">7. Cobra Pose - Bhujangasana</span>
+                  <h2 id="bio">As you slide forward, elevate your chest into the cobra position. In this stance, you can keep your elbows bent and your shoulders away from your ears. Take a lookup. Make a delicate effort to push your chest forward as you inhale, and a little effort to push your navel down as you exhale. Tuck your toes in. Make sure you're extending as much as you can without straining.</h2>
+              </div>
+              <div class="img-div">
+                  <img src="https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/619d2b10c290bf9df7645fbb_sporty-fit-yogini-woman-practices-yoga-asana-bhuja-2021-08-26-22-58-07-utc-min.jpg" alt="" width="500px" height="500px">
+              </div>
+          </div>
+  </section>
+  <section class="bg-light " id="third">
+      <div class="container">
+          <div class="Early">
+              <div>
+                  <span class="tribute-badge">8. Mountain Pose - Parvatasana</span>
+                  <h2 id="bio">
+                    In an 'inverted V' (/\) stance, exhale and lift the hips and tailbone, chest down. Keeping the heels on the ground and making a slight effort to lift the tailbone will allow you to move deeper into the stretch.</h2>
+              </div>
+              <div class="img-div">
+                  <img src="https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/619d2bff2838390c362b6f6d_woman-doing-ashtanga-vinyasa-yoga-asana-adhomukha-2021-08-26-22-57-47-utc-min.jpg" alt="" width="500px" height="550px">
+              </div>
+          </div>
+  </section>
+  <section class="bg-dark " id="second">
+    <div class="container">
+        <div class="Biography">
+            <div>
+                <span class="tribute-badge">9.Equestrian Pose - Ashwa Sanchalanasana</span>
+                <h2 id="bio">Breathing in, insert the right foot between the two hands, the left knee down to the floor, squeeze the hips down, gaze up, and place the right foot exactly between the two hands with the right calf perpendicular to the floor. To deepen the stretch, gently push the hips down towards the floor while in this position.</h2>
+            </div>
+            <div class="img-div">
+                <img src="https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/619d29a26625d9bf5c3d718e_horse-rider-yoga-pose-2021-08-26-15-32-18-utc-min.jpg" alt="" width="500px" height="500px">
+            </div>
+        </div>
+</section>
+<section class="bg-light " id="third">
+    <div class="container">
+        <div class="Early">
+            <div>
+                <span class="tribute-badge">10.Hand To Foot Pose - Hasta Padasana</span>
+                <h2 id="bio">
+                  Exhale and step forward with your left foot. Keep your palms flat on the ground. If necessary, you can bend your knees. Straighten your knees gently and, if possible, try to touch your nose to your knees. Continue to breathe normally.</h2>
+            </div>
+            <div class="img-div">
+                <img src="https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/619d2e636474ab76000806e1_woman-doing-ashtanga-vinyasa-yoga-asana-padangusht-2021-08-26-22-58-07-utc.jpg" alt="" width="500px" height="550px">
+            </div>
+        </div>
+</section>
+<section class="bg-dark " id="second">
+  <div class="container">
+      <div class="Biography">
+          <div>
+              <span class="tribute-badge">11. Raised Arms Pose - Hasta Uttanasana</span>
+              <h2 id="bio">Inhale deeply, twist your spine up, raise your hands, and bend backwards a little, pushing your hips slightly outward. Make sure your biceps are parallel to your ears. Rather than stretching backwards, the goal is to stretch up more.</h2>
+          </div>
+          <div class="img-div">
+              <img src="https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/619d2c379da2168de8174aa7_sporty-fit-woman-practices-yoga-asana-anuvittasana-2021-08-26-22-58-51-utc.jpg" alt="" width="500px" height="500px">
+          </div>
+      </div>
+</section>
+<section class="bg-light " id="third">
+  <div class="container">
+      <div class="Early">
+          <div>
+              <span class="tribute-badge">12. Standing Mountain Pose - Tadasana</span>
+              <h2 id="bio">
+                As you exhale, straighten your torso first, then lower your arms. Relax in this position and pay attention to your body's sensations.</h2>
+          </div>
+          <div class="img-div">
+              <img src="https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/619d2d0ada7aa500d3502e00_woman-doing-hatha-yoga-asana-tadasana-2021-08-26-22-57-56-utc.jpg" alt="" width="500px" height="550px">
+          </div>
+      </div>
+</section>
+ 
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <style>
+
+    
+  *{
+margin: 0; padding: 10px;
+box-sizing: border-box;
+font-family: 'Josefin Sans', sans-serif;
+font-size: 18px;
+}
+
+header{
+ width: 100%;
+ height: 100px;
+ background-image: url('../images/bg.png');
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+ backface-visibility: hidden;
+ background-color: white;
+
+}
+
+.mainheader{
+ width: 100%;
+ height: 60px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.mainheader .logo img{
+ width: 250px; height: 70px;
+ padding-left: 60px;
+}
+
+.mainheader nav{
+  font-family: 'Josefin Sans', sans-serif;
+ width: 450px;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ margin-left: 215px;
+ margin-bottom: 20px;
+}
+
+.mainheader nav a{
+ text-decoration: none;
+ color: black;
+ text-transform: uppercase;
+ font-family: 'Josefin Sans', sans-serif;
+ padding:0px;
+ font-size: 17px;
+}
+
+.menubtn{
+ margin-right: 60px;
+}
+.mainheader button{
+ padding: 10px 45px;
+ text-align: center;
+ font-size: 14px;
+ color: #fff;
+ border: none;
+ background-image: linear-gradient(to right,#649bff,#0070fa,#649bff);
+ border-radius: 10px;
+ margin-top: -110px;
+}
+
+
+main{
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+  </style>
+</head>
+<body>
+    <header >
+        <div class="mainheader">
+         <div class="logo">
+          <img src="{{ url_for('static', filename='images/2.jpg') }}" style="width: 125%; height: 130px;">
+         </div>
+       
+         <nav>
+          <a href="/dashboard">Home</a>
+          <a href="/page2">Challenges</a>
+          <a href="/rv">Review</a>
+          <a href="/profile" >My&nbsp;Profile</a>
+         </nav>
+       
+         <div class="menubtn">
+          <button><a style="color:#eee; text-decoration: none;" href="/logout"> Logout</a></button>
+         </div>
+        </div>
+        </header>
+        <body>
+          <div class="contact1">
+          <div class="container-contact1">
+          <div class="contact1-pic js-tilt" data-tilt="">
+            <img src="https://i1.wp.com/www.revsquared.ca/wp-content/uploads/2017/01/REVSquared-Webinar-Feedback.jpg?ssl=1" alt="IMG">
+          </div>
+           <form class="contact1-form validate-form" action="/contact" method="post">
+          <div class="wrap-input1 validate-input" data-validate="Message is required">
+          <textarea class="input1" name="message" placeholder="Message"></textarea>
+          <span class="shadow-input1"></span>
+          </div>
+          <div class="container-contact1-form-btn">
+          <button class="contact1-form-btn">
+            <span>Submit<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+          </button>
+          </div>
+          </form>
+          </div>
+          </div>
+        </body>
+</body>
+</html>

@@ -1,0 +1,80 @@
+{"intents": [
+  {"tag": "greeting",
+  "patterns":["hi","hello"],
+  "responses":["hi,,how can i help you?","hello,how can i help you?"],
+   "context": [""]
+  },
+  {"tag": "thanks",
+   "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+   "responses": ["Happy to help!", "Any time!", "My pleasure"],
+   "context": [""]
+  },
+  {"tag": "noanswer",
+   "patterns": [],
+   "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+   "context": [""]
+  },
+  {"tag": "not feeling well",
+  "patterns":["i am not feeling well from the past 2 days"],
+  "responses":["could u please know me in detail about u health condition"],
+   "context": [""]
+  },
+  {"tag": "suffering",
+  "patterns":["i am suffering from fever"],
+  "responses":["Can you tell me a bit more about your symptoms?"],
+   "context": [""]
+  },
+  {"tag": "having",
+  "patterns":["i am having headache,body pains,cold and cough from the past few days"],
+  "responses":["okay, I understand. Let me know temperature now to get an accurate reading."],
+   "context": [""]
+  },
+  {"tag": "temperature",
+  "patterns":["Let me know my body temperature"],
+  "responses":["Your temperature is quite high at 102°F. It sounds like you might have a fever."],
+   "context": ["search_pharmacy_by_name"]
+  },
+  {"tag": "medicines",
+  "patterns":["Can u suggest me what type of medicines should i prefer"],
+  "responses":["okay sure .please let me know your age,so that i can suggest the sutiable dose of tablets."],  
+   "context": [""]
+  },
+  {"tag": "age",
+  "patterns":["Sure.I am 18 years old"],
+  "responses":["okay sure.you prefer Acetaminophen and ibuprofen for headache,fever,bodypains and also consider the Delsym as the cough syrup."],
+   "context": [""]
+  },
+  {"tag": " food diet",
+  "patterns":["Is there any food diet to be consider to reduce the fever"],
+  "responses":["In the meantime, I suggest you rest, drink plenty of fluids,prefer only hot water and take some rest."],
+   "context": ["search_hospital_by_type"]
+  },
+  {"tag": "fever doesn't go down",
+  "patterns":["Okay, that makes sense. What should I do if my fever doesn't go down?"],
+  "responses":["If your fever persists for more than a few days or if it gets worse, I recommend you to consult a doctor ,so doctor can run some tests and figure out the underlying cause."],
+   "context": [""]
+  },
+  {"tag": "advice",
+  "patterns": ["Understood. Thank you for ur advice."],
+  "responses":["You're welcome. Take care and get plenty of rest."],
+   "context": [""]
+  },
+  {"tag": "bye",
+  "patterns":["Bye!!!!"],
+  "responses":["Thank you for chatting with me! If you have any more questions or concerns in the future, feel free to come back and chat with me again. Have a great day!!!!"],
+   "context": [""]
+  },
+  {"tag": "Done",
+  "patterns":["okay.Done!"],
+  "responses": ["Is there anything else I can assist you with today?"],
+   "context": [""]
+  },
+  {"tag": "Nothing",
+  "patterns":["Nothing ...Done!"],
+  "responses": ["Have a nice day"],
+   "context": [""]
+  }
+
+
+]
+}
